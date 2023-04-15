@@ -1,0 +1,23 @@
+{
+  "version": 2,
+  "dgSpecHash": "8efxVq7Mqev85A69BMBcYMPZVh5btmCqIM6ESogFXfbqIpEbIfqfhGRU3axrvDnqpDsKFWxes2IvnKkxqD3gxQ==",
+  "success": true,
+  "projectFilePath": "D:\\DoAn_2\\source code\\DoAn_2\\DoAn_2.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\TranV\\.nuget\\packages\\audioswitcher.audioapi.coreaudio\\3.0.0.1\\audioswitcher.audioapi.coreaudio.3.0.0.1.nupkg.sha512",
+    "C:\\Users\\TranV\\.nuget\\packages\\fody\\6.6.4\\fody.6.6.4.nupkg.sha512",
+    "C:\\Users\\TranV\\.nuget\\packages\\propertychanged.fody\\4.1.0\\propertychanged.fody.4.1.0.nupkg.sha512"
+  ],
+  "logs": [
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'AudioSwitcher.AudioApi.CoreAudio 3.0.0.1' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8' instead of the project target framework 'net6.0-windows7.0'. This package may not be fully compatible with your project.",
+      "libraryId": "AudioSwitcher.AudioApi.CoreAudio",
+      "targetGraphs": [
+        "net6.0-windows7.0"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,249 @@
+﻿<Window x:Class="DoAn_2.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:DoAn_2"
+        mc:Ignorable="d"
+        Title="Media Player" Height="800" Width="1234" KeyUp="Window_KeyUp" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" Loaded="Window_Loaded" Icon="/ip14plus.jpg">
+    <Window.Resources>
+        <SolidColorBrush x:Key="CustomSliderBackgroundSolidColorBrushKey" Color="#55ffffff" />
+        <SolidColorBrush x:Key="CustomSliderForegroundSolidColorBrushKey" Color="#ff1e91ea" />
+        <SolidColorBrush x:Key="CustomSliderHighlightSolidColorBrushKey"  Color="#ffefefef" />
+        <ControlTemplate x:Key="CustomSliderThumbControlTemplateKey" TargetType="{x:Type Thumb}">
+            <Grid
+                HorizontalAlignment="Center"
+                VerticalAlignment="Center"
+                UseLayoutRounding="True">
+                <Rectangle x:Name="gripRectangle"
+                    Width="8"
+                    Height="{Binding Path=Height, RelativeSource={RelativeSource TemplatedParent}}"
+                    RadiusX="3"
+                    RadiusY="3"
+                    StrokeThickness="0"
+                    Stretch="Fill"
+                    Fill="{StaticResource CustomSliderForegroundSolidColorBrushKey}"
+                    UseLayoutRounding="True" />
+            </Grid>
+            <ControlTemplate.Triggers>
+                <Trigger Property="IsDragging" Value="true">
+                    <Setter
+                        TargetName="gripRectangle"
+                        Property="Fill"
+                        Value="{StaticResource CustomSliderHighlightSolidColorBrushKey}" />
+                </Trigger>
+                <Trigger Property="IsEnabled" Value="false">
+                    <Setter
+                        TargetName="gripRectangle"
+                        Property="Fill"
+                        Value="{StaticResource CustomSliderBackgroundSolidColorBrushKey}" />
+                </Trigger>
+                <Trigger Property="IsKeyboardFocused" Value="true">
+                    <Setter
+                        TargetName="gripRectangle"
+                        Property="Fill"
+                        Value="{StaticResource CustomSliderForegroundSolidColorBrushKey}" />
+                </Trigger>
+            </ControlTemplate.Triggers>
+        </ControlTemplate>
+        <ControlTemplate x:Key="CustomSliderControlTemplateKey" TargetType="{x:Type Slider}">
+            <Border x:Name="border"
+                Background="Transparent"
+                SnapsToDevicePixels="True">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="{TemplateBinding MinHeight}" />
+                    </Grid.RowDefinitions>
+                    <DockPanel LastChildFill="True">
+                        <Border x:Name="PART_SelectionRange"
+                            Height="3"
+                            ClipToBounds="True"
+                            Visibility="Visible">
+                            <Rectangle
+                                Margin="4 0 -4 0"
+                                RadiusX="1"
+                                RadiusY="1"
+                                Fill="{StaticResource CustomSliderForegroundSolidColorBrushKey}" />
+                        </Border>
+                        <Border
+                            Height="3"
+                            ClipToBounds="True"
+                            Visibility="Visible">
+                            <Rectangle x:Name="PART_NegativeSelection"
+                                Margin="8 0 4 0"
+                                RadiusX="1"
+                                RadiusY="1"
+                                Fill="{StaticResource CustomSliderBackgroundSolidColorBrushKey}" />
+                        </Border>
+                    </DockPanel>
+                    <Track x:Name="PART_Track">
+                        <Track.Thumb>
+                            <Thumb x:Name="Thumb"
+                                Template="{StaticResource CustomSliderThumbControlTemplateKey}"
+                                OverridesDefaultStyle="True"
+                                VerticalAlignment="Center"
+                                Width="8"
+                                Height="{TemplateBinding MinHeight}"
+                                Focusable="False" />
+                        </Track.Thumb>
+                    </Track>
+                </Grid>
+            </Border>
+            <ControlTemplate.Triggers>
+                <DataTrigger Binding="{Binding ElementName=Thumb, Path=IsDragging}" Value="True">
+                    <Setter
+                        TargetName="PART_NegativeSelection"
+                        Property="Fill"
+                        Value="{StaticResource CustomSliderHighlightSolidColorBrushKey}" />
+                </DataTrigger>
+            </ControlTemplate.Triggers>
+        </ControlTemplate>
+        <Style x:Key="CustomSliderStyleKey" TargetType="{x:Type Slider}">
+            <Setter Property="Template"                     Value="{StaticResource CustomSliderControlTemplateKey}" />
+            <Setter Property="VerticalAlignment"            Value="Center"      />
+            <Setter Property="MinHeight"                    Value="26"          />
+            <Setter Property="MaxHeight"                    Value="26"          />
+            <Setter Property="Height"                       Value="26"          />
+            <Setter Property="BorderBrush"                  Value="Transparent" />
+            <Setter Property="Background"                   Value="Transparent" />
+            <Setter Property="IsMoveToPointEnabled"         Value="True"        />
+            <Setter Property="AutoToolTipPlacement"         Value="None"        />
+            <Setter Property="IsSnapToTickEnabled"          Value="True"        />
+            <Setter Property="TickFrequency"                Value="0.01"        />
+            <Setter Property="SmallChange"                  Value="0.01"        />
+            <Setter Property="LargeChange"                  Value="0.01"        />
+            <Setter Property="Minimum"                      Value="0"           />
+            <Setter Property="SelectionStart"               Value="{Binding Path=Minimum, RelativeSource={RelativeSource Self}}" />
+            <Setter Property="SelectionEnd"                 Value="{Binding Path=Value, RelativeSource={RelativeSource Self}}"   />
+            <Setter Property="Stylus.IsPressAndHoldEnabled" Value="false"       />
+        </Style>
+        <Style TargetType="Button" x:Key="ButtonStyle">
+            <Setter Property="Width" Value="30"/>
+            <Setter Property="Height" Value="30"/>
+            <Setter Property="Background" Value="Transparent"/>
+            <Setter Property="BorderBrush" Value="Transparent"/>
+            <Setter Property="Foreground" Value="Black"/>
+            <Setter Property="Cursor" Value="Hand"/>
+
+        </Style>
+        <Style TargetType="TextBlock" x:Key="TextBlockStyle">
+            <Setter Property="Width" Value="40"/>
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="FontFamily" Value="TimeNewRoman"/>
+            <Setter Property="TextAlignment" Value="Center"/>
+        </Style>
+    </Window.Resources>
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="350"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid Grid.Column="0" Name="GridMenu">
+            <Border BorderBrush="Black" BorderThickness="1" Background="Black">
+                <WrapPanel Height="30" VerticalAlignment="Top">
+                    <TextBlock Name="playlistPath" Text="" Width="60" Height="30" Visibility="Visible" ></TextBlock>
+                    <TextBox Width="300" Margin="0 5" FontSize="16"/>
+                    <Button Style="{StaticResource ButtonStyle}" Margin="2 2">
+                        <Image Source="Icon/icons8-search-40.png"/>
+                    </Button>
+
+                </WrapPanel>
+            </Border>
+            <Grid Margin="0,3,0,0">
+                <ListView Name="HistoryList" Visibility="Hidden" Margin="0,-3,0,29">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <WrapPanel>
+                                <Ellipse Height="48" Width="48" VerticalAlignment="Center">
+                                    <Ellipse.Fill>
+                                        <ImageBrush ImageSource="{Binding Image_Video}"/>
+                                    </Ellipse.Fill>
+                                </Ellipse>
+                                <StackPanel Margin="5 10">
+                                    <TextBlock Text="{Binding MusicName}" TextWrapping="Wrap" FontSize="18" FontWeight="Black" Margin="10,0,0,0" Foreground="Black"/>
+                                    <TextBlock Text="{Binding Time}" FontSize="10" FontStyle="Italic" Margin="10,5,0,0"/>
+                                    <TextBlock Text="{Binding FilePath}" Visibility="Hidden"></TextBlock>
+                                </StackPanel>
+                            </WrapPanel>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+                <ListView  Name="ListViewVideo" MouseUp ="ListViewVideo_MouseUp" Margin="0,-3,0,27" ScrollViewer.HorizontalScrollBarVisibility="Visible">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <WrapPanel>
+                                <Ellipse Height="48" Width="48" VerticalAlignment="Center">
+                                    <Ellipse.Fill>
+                                        <ImageBrush ImageSource="{Binding Image_Video}"/>
+                                    </Ellipse.Fill>
+                                </Ellipse>
+                                <StackPanel Margin="5 10">
+                                    <TextBlock Text="{Binding MusicName}" TextWrapping="Wrap" FontSize="18" FontWeight="Black" Margin="10,0,0,0" Foreground="#FF0A07F7"/>
+                                    <TextBlock Text="{Binding Time}" FontSize="10" FontStyle="Italic" Margin="10,5,0,0"/>
+                                    <TextBlock Text="{Binding FilePath}" Visibility="Hidden"></TextBlock>
+                                </StackPanel>
+                            </WrapPanel>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+
+                <WrapPanel Background="Black" VerticalAlignment="Bottom">
+                    <Button Style="{StaticResource ButtonStyle}" ToolTip="Add" Name="btn_add" Click="btn_add_Click">
+                        <Image Source="Icon/icons8-add-new-40.png" />
+                    </Button>
+                    <Button Style="{StaticResource ButtonStyle}" ToolTip="Remove" Name="btn_remove" Click="btn_remove_Click">
+                        <Image Source="Icon/icons8-minus-40.png" />
+                    </Button>
+                    <Button Style="{StaticResource ButtonStyle}" ToolTip="SaveList" Name="ButtonSave" Click="ButtonSave_Click">
+                        <Image Source="Icon/icons8-save-40.png" />
+                    </Button>
+                    <Button Style="{StaticResource ButtonStyle}" ToolTip="UploadList" Name="ButtonLoad" Click="ButtonLoad_Click">
+                        <Image Source="Icon/icons8-upload-40.png" />
+                    </Button>
+                    <Button Style="{StaticResource ButtonStyle}" ToolTip="Create new playlist" Name="CreateListBtn" Click="CreateListBtn_Click">
+                        <Image Source="Icon/icons8-wish-list-40.png" />
+                    </Button>
+                    <Button Style="{StaticResource ButtonStyle}" ToolTip="Show history" Name="HisroryBtn" Click="HisroryBtn_Click">
+                        <Image Source="Icon/icons8-search-40.png" />
+                    </Button>
+                    <TextBlock x:Name="playlistName" Text="default.txt" Foreground="Red" Width="167" TextAlignment="Right"></TextBlock>
+                </WrapPanel>
+            </Grid>
+        </Grid>
+        <Grid Grid.Column="1">
+            <MediaElement Name="player" MediaElement.MediaOpened="player_MediaOpened" MediaEnded="player_MediaEnded"  LoadedBehavior="Manual" Margin="0,4,0,62"/>
+            <StackPanel Background="Black" Height="100" VerticalAlignment="Bottom">
+                <Grid>
+                    <TextBlock Name="currentPos" HorizontalAlignment="Left" VerticalAlignment="Center" Style="{StaticResource TextBlockStyle}" Text="0:00"></TextBlock>
+                    <TextBlock Name="totalPos" HorizontalAlignment="Right" VerticalAlignment="Center" Style="{StaticResource TextBlockStyle}" Text="5:00"></TextBlock>
+                </Grid>
+                <Slider Name="progressSlider" Style="{DynamicResource CustomSliderStyleKey}" Width="850" Cursor="Hand" Value="0" Minimum="0" Maximum="50" ValueChanged="progressSlider_ValueChanged"/>
+                <Canvas VerticalAlignment="Bottom" Height="50" Margin="0 10 0 0" HorizontalAlignment="Center">
+                    <Button Canvas.Right="300" Style="{StaticResource ButtonStyle}" ToolTip="Shuffle" Name="Shuffle" Click="Shuffle_Click" >
+                        <Image Source="Icon/icons8-shuffle-40.png" />
+                    </Button>
+                    <Button Canvas.Right="200" Style="{StaticResource ButtonStyle}" ToolTip="Go back 10s" Name="Prev_Skip" Click="Prev_Skip_Click">
+                        <Image Source="Icon/icons8-go-to-start-40.png" />
+                    </Button>
+                    <Button Canvas.Right="100" Style="{StaticResource ButtonStyle}" ToolTip="Previous" Name="ButtonPrev" Click="ButtonPrev_Click">
+                        <Image Source="Icon/icons8-skip-to-start-40.png"/>
+                    </Button>
+                    <Button Canvas.Right="0" Style="{StaticResource ButtonStyle}" ToolTip="Play" Name="ButtonPlay" Click="ButtonPlay_Click">
+                        <Image Source="Icon/icons8-start-40.png"/>
+                    </Button>
+                    <Button Canvas.Right="-100" Style="{StaticResource ButtonStyle}" ToolTip="Next" Name="ButtonNext" Click="ButtonNext_Click">
+                        <Image Source="Icon/icons8-end-40.png"/>
+                    </Button>
+                    <Button Canvas.Right="-200" Style="{StaticResource ButtonStyle}" ToolTip="Go To 10s" Name="Next_Skip" Click="Next_Skip_Click">
+                        <Image Source="Icon/icons8-go-to-end-40.png"/>
+                    </Button>
+                    <Button Canvas.Right="-300" Style="{StaticResource ButtonStyle}" ToolTip="Audio">
+                        <Image Source="Icon/icons8-audio-40.png"/>
+                    </Button>
+                    <TextBlock TextAlignment="Center" Foreground="White" Name="VolumeLabel" Width="40" Height="30" Canvas.Left="343" Canvas.Top="-7" RenderTransformOrigin="0.44,1.31" HorizontalAlignment="Center" VerticalAlignment="Top"></TextBlock>
+                    <Slider Width="110" Canvas.Left="305" Canvas.Top="6" Style="{DynamicResource CustomSliderStyleKey}" Value="100" Maximum="100" Name="Volume" ValueChanged="Volume_ValueChanged"/>
+                </Canvas>
+            </StackPanel>
+        </Grid>
+    </Grid>
+</Window>

@@ -1,0 +1,64 @@
+D:\Code\WPF\DoAn_2\DoAn_2\obj\Debug\net6.0-windows\DoAn_2.csproj.AssemblyReference.cache
+D:\Code\WPF\DoAn_2\DoAn_2\obj\Debug\net6.0-windows\MainWindow.g.cs
+D:\Code\WPF\DoAn_2\DoAn_2\obj\Debug\net6.0-windows\App.g.cs
+D:\Code\WPF\DoAn_2\DoAn_2\obj\Debug\net6.0-windows\DoAn_2_MarkupCompile.cache
+D:\Code\WPF\DoAn_2\DoAn_2\obj\Debug\net6.0-windows\DoAn_2_MarkupCompile.lref
+D:\Code\WPF\DoAn_2\DoAn_2\bin\Debug\net6.0-windows\DoAn_2.exe
+D:\Code\WPF\DoAn_2\DoAn_2\bin\Debug\net6.0-windows\DoAn_2.deps.json
+D:\Code\WPF\DoAn_2\DoAn_2\bin\Debug\net6.0-windows\DoAn_2.runtimeconfig.json
+D:\Code\WPF\DoAn_2\DoAn_2\bin\Debug\net6.0-windows\DoAn_2.dll
+D:\Code\WPF\DoAn_2\DoAn_2\bin\Debug\net6.0-windows\DoAn_2.pdb
+D:\Code\WPF\DoAn_2\DoAn_2\bin\Debug\net6.0-windows\WMPLib.dll
+D:\Code\WPF\DoAn_2\DoAn_2\obj\Debug\net6.0-windows\MainWindow.baml
+D:\Code\WPF\DoAn_2\DoAn_2\obj\Debug\net6.0-windows\DoAn_2.g.resources
+D:\Code\WPF\DoAn_2\DoAn_2\obj\Debug\net6.0-windows\DoAn_2.GeneratedMSBuildEditorConfig.editorconfig
+D:\Code\WPF\DoAn_2\DoAn_2\obj\Debug\net6.0-windows\DoAn_2.AssemblyInfoInputs.cache
+D:\Code\WPF\DoAn_2\DoAn_2\obj\Debug\net6.0-windows\DoAn_2.AssemblyInfo.cs
+D:\Code\WPF\DoAn_2\DoAn_2\obj\Debug\net6.0-windows\DoAn_2.csproj.CoreCompileInputs.cache
+D:\Code\WPF\DoAn_2\DoAn_2\obj\Debug\net6.0-windows\DoAn_2.csproj.CopyComplete
+D:\Code\WPF\DoAn_2\DoAn_2\obj\Debug\net6.0-windows\DoAn_2.dll
+D:\Code\WPF\DoAn_2\DoAn_2\obj\Debug\net6.0-windows\refint\DoAn_2.dll
+D:\Code\WPF\DoAn_2\DoAn_2\obj\Debug\net6.0-windows\DoAn_2.pdb
+D:\Code\WPF\DoAn_2\DoAn_2\obj\Debug\net6.0-windows\DoAn_2.genruntimeconfig.cache
+D:\Code\WPF\DoAn_2\DoAn_2\obj\Debug\net6.0-windows\ref\DoAn_2.dll
+C:\Users\Xuan Hoang\Downloads\DoAn_2\DoAn_2\bin\Debug\net6.0-windows\DoAn_2.dll
+C:\Users\Xuan Hoang\Downloads\DoAn_2\DoAn_2\bin\Debug\net6.0-windows\DoAn_2.exe
+C:\Users\Xuan Hoang\Downloads\DoAn_2\DoAn_2\bin\Debug\net6.0-windows\DoAn_2.deps.json
+C:\Users\Xuan Hoang\Downloads\DoAn_2\DoAn_2\bin\Debug\net6.0-windows\DoAn_2.runtimeconfig.json
+C:\Users\Xuan Hoang\Downloads\DoAn_2\DoAn_2\bin\Debug\net6.0-windows\AudioSwitcher.AudioApi.dll
+C:\Users\Xuan Hoang\Downloads\DoAn_2\DoAn_2\bin\Debug\net6.0-windows\AudioSwitcher.AudioApi.CoreAudio.dll
+C:\Users\Xuan Hoang\Downloads\DoAn_2\DoAn_2\obj\Debug\net6.0-windows\DoAn_2.csproj.AssemblyReference.cache
+C:\Users\Xuan Hoang\Downloads\DoAn_2\DoAn_2\obj\Debug\net6.0-windows\Interop.WMPLib.dll
+C:\Users\Xuan Hoang\Downloads\DoAn_2\DoAn_2\obj\Debug\net6.0-windows\DoAn_2.csproj.ResolveComReference.cache
+C:\Users\Xuan Hoang\Downloads\DoAn_2\DoAn_2\obj\Debug\net6.0-windows\CreateNewPlaylistWindow.g.cs
+C:\Users\Xuan Hoang\Downloads\DoAn_2\DoAn_2\obj\Debug\net6.0-windows\MainWindow.g.cs
+C:\Users\Xuan Hoang\Downloads\DoAn_2\DoAn_2\obj\Debug\net6.0-windows\App.g.cs
+C:\Users\Xuan Hoang\Downloads\DoAn_2\DoAn_2\obj\Debug\net6.0-windows\DoAn_2_MarkupCompile.cache
+C:\Users\Xuan Hoang\Downloads\DoAn_2\DoAn_2\obj\Debug\net6.0-windows\DoAn_2_MarkupCompile.lref
+C:\Users\Xuan Hoang\Downloads\DoAn_2\DoAn_2\obj\Debug\net6.0-windows\CreateNewPlaylistWindow.baml
+C:\Users\Xuan Hoang\Downloads\DoAn_2\DoAn_2\obj\Debug\net6.0-windows\MainWindow.baml
+C:\Users\Xuan Hoang\Downloads\DoAn_2\DoAn_2\obj\Debug\net6.0-windows\DoAn_2.g.resources
+C:\Users\Xuan Hoang\Downloads\DoAn_2\DoAn_2\obj\Debug\net6.0-windows\DoAn_2.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Xuan Hoang\Downloads\DoAn_2\DoAn_2\obj\Debug\net6.0-windows\DoAn_2.AssemblyInfoInputs.cache
+C:\Users\Xuan Hoang\Downloads\DoAn_2\DoAn_2\obj\Debug\net6.0-windows\DoAn_2.AssemblyInfo.cs
+C:\Users\Xuan Hoang\Downloads\DoAn_2\DoAn_2\obj\Debug\net6.0-windows\DoAn_2.csproj.CoreCompileInputs.cache
+C:\Users\Xuan Hoang\Downloads\DoAn_2\DoAn_2\obj\Debug\net6.0-windows\DoAn_2.csproj.Fody.CopyLocal.cache
+C:\Users\Xuan Hoang\Downloads\DoAn_2\DoAn_2\obj\Debug\net6.0-windows\DoAn_2.csproj.Fody.RuntimeCopyLocal.cache
+C:\Users\Xuan Hoang\Downloads\DoAn_2\DoAn_2\obj\Debug\net6.0-windows\DoAn_2.csproj.CopyComplete
+C:\Users\Xuan Hoang\Downloads\DoAn_2\DoAn_2\obj\Debug\net6.0-windows\DoAn_2.dll
+C:\Users\Xuan Hoang\Downloads\DoAn_2\DoAn_2\obj\Debug\net6.0-windows\refint\DoAn_2.dll
+C:\Users\Xuan Hoang\Downloads\DoAn_2\DoAn_2\obj\Debug\net6.0-windows\DoAn_2.pdb
+C:\Users\Xuan Hoang\Downloads\DoAn_2\DoAn_2\obj\Debug\net6.0-windows\DoAn_2.genruntimeconfig.cache
+C:\Users\Xuan Hoang\Downloads\DoAn_2\DoAn_2\bin\Debug\net6.0-windows\DoAn_2.pdb
+C:\Users\Xuan Hoang\Downloads\DoAn_2\DoAn_2\obj\Debug\net6.0-windows\ref\DoAn_2.dll
+D:\DoAn_2\source code\DoAn_2\obj\Debug\net6.0-windows\DoAn_2.csproj.AssemblyReference.cache
+D:\DoAn_2\source code\DoAn_2\obj\Debug\net6.0-windows\Interop.WMPLib.dll
+D:\DoAn_2\source code\DoAn_2\obj\Debug\net6.0-windows\DoAn_2.csproj.ResolveComReference.cache
+D:\DoAn_2\source code\DoAn_2\obj\Debug\net6.0-windows\CreateNewPlaylistWindow.g.cs
+D:\DoAn_2\source code\DoAn_2\obj\Debug\net6.0-windows\MainWindow.g.cs
+D:\DoAn_2\source code\DoAn_2\obj\Debug\net6.0-windows\App.g.cs
+D:\DoAn_2\source code\DoAn_2\obj\Debug\net6.0-windows\DoAn_2_MarkupCompile.cache
+D:\DoAn_2\source code\DoAn_2\obj\Debug\net6.0-windows\DoAn_2_MarkupCompile.lref
+D:\DoAn_2\source code\DoAn_2\obj\Debug\net6.0-windows\DoAn_2.dll
+D:\DoAn_2\source code\DoAn_2\obj\Debug\net6.0-windows\refint\DoAn_2.dll
+D:\DoAn_2\source code\DoAn_2\obj\Debug\net6.0-windows\DoAn_2.pdb
